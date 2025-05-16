@@ -7,7 +7,6 @@ import jsx from '@/assets/img/JSX.png'
 import HTMLJSX from '@/assets/img/HTML&JSX.png'
 import Image from "@/components/Image";
 const data = [
-
     {
         question: "JSX là gì?",
         answers: [
@@ -26,7 +25,6 @@ const data = [
         ]
     }
 ];
-
 
 const JSX = () => {
     return (

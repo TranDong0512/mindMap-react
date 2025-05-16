@@ -1,14 +1,13 @@
-
-// const element = (
-//     <div className="container">
-//         <h1>Hello, React!</h1>
-//         <button onClick={() => alert('Clicked!')}>Click</button>
-//     </div>
-// )
-// export default element
-
 import React from "react";
+// JSX
+export const element1 = (
+    <div className="container">
+        <h1>Hello, React!</h1>
+        <button onClick={() => alert('Clicked!')}>Click</button>
+    </div>
+)
 
+// HTML 
 const element = React.createElement(
     'div',
     { className: 'container' },
