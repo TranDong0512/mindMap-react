@@ -9,3 +9,6 @@ export { default as VirtualDom } from "../admin/VirtualDOM";
 export { default as JSX } from "../admin/JSX";
 export { default as Component } from "../admin/Component";
 export { default as Props } from "../admin/Props";
+export { default as State } from "../admin/State";
+export { default as UseEffectComponent } from "../admin/UseEffect";
+export { default as Lifecycle } from "../admin/Lifecycle";

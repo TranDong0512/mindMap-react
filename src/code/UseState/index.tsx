@@ -1,6 +1,7 @@
+import { Input } from "@/components/ui/input";
 import { useState } from "react";
 
-const UseState = () => {
+const UseState01 = () => {
     const [count, setCount] = useState<number>(0)
     /* 
     - Khi truyền callBack vào setState thì callBack sẽ nhận giá
@@ -22,4 +23,39 @@ const UseState = () => {
     )
 };
 
-export default UseState;
+export default UseState01;
+
+
+export const UseState02 = () => {
+    const [state, setState] = useState({
+        name: "",
+        age: 0
+    })
+
+    const [node, setNode] = useState([<Input />])
+
+    const [fun] = useState(() => (
+        <p>Hello</p>
+    ));
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setState((prev) => ({
+            ...prev,
+            [e.target.name]: e.target.value
+        }))
+    }
+    const handleNode = () => {
+        setNode([...node, <Input key={node.length} />])
+    }
+    return (
+        <>
+            <p>Name: {state.name}</p>
+            <p>Age: {state.age}</p>
+            <Input name="name" value={state.name} onChange={handleChange} />
+            <Input name="age" value={state.age} onChange={handleChange} />
+            <button onClick={handleNode}>Add Input</button>
+            {node}
+            {fun}
+        </>
+    )
+};
+

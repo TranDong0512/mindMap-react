@@ -1,5 +1,9 @@
 import { AccordionItemComponent } from "@/components/AccordionItem";
 import Container from "@/components/Container";
+import ResizableComponent from "@/components/ResizableComponent";
+import props1 from '@/assets/img/props1.png'
+import props2 from '@/assets/img/props2.png'
+import children from '@/assets/img/children.png'
 
 const data = [
     {
@@ -58,9 +62,16 @@ const Props = () => {
             </div>
             <div className=" rounded-lg shadow-md p-6 mt-2">
                 <h2 className="text-2xl font-bold mb-1">
+                    Ví dụ về truyền Props
+                </h2>
+                <ResizableComponent img1={props1} img2={props2} />
+            </div>
+            <div className=" rounded-lg shadow-md p-6 mt-2">
+                <h2 className="text-2xl font-bold mb-1">
                     Tìm hiểu về Children
                 </h2>
                 <AccordionItemComponent data={data2} />
+                <img src={children} alt='Children' width={500} height={500} />
             </div>
         </Container>
     )

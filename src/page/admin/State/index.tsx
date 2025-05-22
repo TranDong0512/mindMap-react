@@ -4,11 +4,16 @@ import stateClass from '@/assets/img/state-class.png'
 import Image from "@/components/Image";
 import state1 from '@/assets/img/state1.png'
 import state2 from '@/assets/img/state2.png'
+import state3 from '@/assets/img/state3.png'
+import state4 from '@/assets/img/state4.png'
 import ResizableComponent from "@/components/ResizableComponent";
 const data = [
     {
         question: "State là gì?", answers: [
-            "Trong phần trước đã nói giá trị của props không được thay đổi, chỉ truyền từ compoent này qua cmponent khác ( cha xuống con ). Nhưng trong thực tế thì các Component cũng cần phải xử lý dữ liệu riêng, cập nhật dữ liệu riêng. Chính vì thế state ra đời để giải quyết bài toán về dữ liệu bên trong component."
+            `Trong phần trước đã nói giá trị của props không được thay đổi, 
+            chỉ truyền từ compoent này qua cmponent khác(cha xuống con).
+            Nhưng trong thực tế thì các Component cũng cần phải xử lý dữ liệu riêng, cập nhật dữ liệu riêng.
+            Chính vì thế state ra đời để giải quyết bài toán về dữ liệu bên trong component.`
         ]
     }
 ]
@@ -16,6 +21,7 @@ const data2 = [
     {
         question: "useState là gì?", answers: [
             "- Là một hook được sử dụng trong Function Compoent thay thế cho this.state của class component",
+            "- useState là một hàm trả về một mảng có 2 phần tử: giá trị hiện tại của state và hàm cập nhật giá trị của state.",
             "- Dùng để quản lý trạng thái, lưu trữ và cập nhật dữ liệu trong component. Khi state thay đổi thì React sẽ tự động rerender lại componet để phản ánh sự thay đổi đó.",
             "- useState có thể lưu trữ bất kì kiểu dữ liêu nào như số, chuỗi, mảng, object, function, ....",
             "- Có thể sử dụng nhiều state trong 1 component."
@@ -28,7 +34,10 @@ const data3 = [
             "const [state, setState] = useState(initialState);",
             "- state - Biến chứa giá trị hiện tại",
             "- setState - Hàm cập nhật lại giá trị của state. Khi gọi setState react sẽ rerender lại component với giá trị mới",
-            "- initialState - Giá trị ban đầu của state chỉ "
+            "- setState có thể nhận vào 1 giá trị hoặc 1 hàm callback. Nếu truyền vào giá trị thì giá trị này sẽ được gán cho state. Nếu truyền vào hàm callback thì hàm này sẽ nhận vào giá trị trước đó và trả về giá trị mới cho state.",
+            "- initialState - Giá trị ban đầu của state chỉ sử dụng tại lần đầu component render. Nếu không truyền giá trị này thì state sẽ có giá trị là undefined.",
+            "- initialState có thể là một hàm, trong trường hợp này hàm sẽ được gọi chỉ một lần khi component được khởi tạo. Điều này giúp tối ưu hiệu suất cho các state phức tạp.",
+            "- initialState có thể là một component, trong trường hợp này component sẽ được render và trả về giá trị cho state.",
         ]
     }
 ]
@@ -72,6 +81,7 @@ const State = () => {
                     Lưu ý
                 </h2>
                 <AccordionItemComponent data={data4} />
+                <ResizableComponent img1={state3} img2={state4} />
                 <ResizableComponent img1={state1} img2={state2} />
 
             </div>

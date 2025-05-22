@@ -66,76 +66,20 @@ const data = {
           title: "State",
           url: "/state",
         },
-        {
-          title: "Data Fetching",
-          url: "#",
-          isActive: true,
-        },
       ],
     },
+
     {
-      title: "API Reference",
-      url: "#",
+      title: "Lifecycle và useEffect",
+      url: "state-props",
       items: [
         {
-          title: "Components",
-          url: "#",
+          title: "Lifecycle",
+          url: "/lifecycle",
         },
         {
-          title: "File Conventions",
-          url: "#",
-        },
-        {
-          title: "Functions",
-          url: "#",
-        },
-        {
-          title: "next.config.js Options",
-          url: "#",
-        },
-        {
-          title: "CLI",
-          url: "#",
-        },
-        {
-          title: "Edge Runtime",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Architecture",
-      url: "#",
-      items: [
-        {
-          title: "Accessibility",
-          url: "#",
-        },
-        {
-          title: "Fast Refresh",
-          url: "#",
-        },
-        {
-          title: "Next.js Compiler",
-          url: "#",
-        },
-        {
-          title: "Supported Browsers",
-          url: "#",
-        },
-        {
-          title: "Turbopack",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Community",
-      url: "#",
-      items: [
-        {
-          title: "Contribution Guide",
-          url: "#",
+          title: "useEffect",
+          url: "/useEffect",
         },
       ],
     },
@@ -173,7 +117,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                   <SidebarMenu>
                     {item.items.map((item) => (
                       <SidebarMenuItem key={item.title}>
-                        <SidebarMenuButton asChild isActive={item.isActive}>
+                        <SidebarMenuButton asChild >
                           <NavLink to={item.url}>{item.title}</NavLink>
                         </SidebarMenuButton>
                       </SidebarMenuItem>
