@@ -12,3 +12,5 @@ export { default as Props } from "../admin/Props";
 export { default as State } from "../admin/State";
 export { default as UseEffectComponent } from "../admin/UseEffect";
 export { default as Lifecycle } from "../admin/Lifecycle";
+export { default as HOC } from "../admin/HOC";
+export { default as Hooks } from "../admin/Hook";

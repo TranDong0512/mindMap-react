@@ -1,7 +1,7 @@
 /** @format */
 
 import { PublicLayout } from "@/layout/PublicLayout";
-import { Component, JSX, Lifecycle, Props, ReactDom, State, UseEffectComponent, VirtualDom, Vite, WhatReact } from "@/page/admin";
+import { Component, HOC, Hooks, JSX, Lifecycle, Props, ReactDom, State, UseEffectComponent, VirtualDom, Vite, WhatReact } from "@/page/admin";
 import { NotFound } from "@/page/NotFound/NotFound";
 
 export const publicRouter = [
@@ -19,6 +19,8 @@ export const publicRouter = [
       { path: 'state', element: <State /> },
       { path: 'useEffect', element: <UseEffectComponent /> },
       { path: 'lifecycle', element: <Lifecycle /> },
+      { path: 'hoc', element: <HOC /> },
+      { path: 'hooks', element: <Hooks /> },
     ]
   },
   {

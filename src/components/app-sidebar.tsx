@@ -56,7 +56,7 @@ const data = {
     },
     {
       title: "State and Props",
-      url: "state-props",
+      url: "",
       items: [
         {
           title: "Props",
@@ -71,7 +71,7 @@ const data = {
 
     {
       title: "Lifecycle và useEffect",
-      url: "state-props",
+      url: "",
       items: [
         {
           title: "Lifecycle",
@@ -80,6 +80,20 @@ const data = {
         {
           title: "useEffect",
           url: "/useEffect",
+        },
+      ],
+    },
+    {
+      title: "HOC và Hooks nâng cao",
+      url: "",
+      items: [
+        {
+          title: "HOC",
+          url: "/hoc",
+        },
+        {
+          title: "Hooks",
+          url: "/hooks",
         },
       ],
     },

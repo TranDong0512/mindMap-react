@@ -12,7 +12,6 @@ const Depen = () => {
         // Trong trường hợp này sẽ dẫn đến việc component bị render lại liên tục và không thể dừng lại
         // Lý do là vì useEffect sẽ so sánh địa chỉ ô nhớ của 2 mảng data ở thời điểm hiện tại với data ở lần 1
         // Và địa chỉ ô nhớ sẽ không trùng nhau nên sẽ dẫn đến việc component bị render lại liên tục
-
     });
 
     React.useEffect(() => {
